@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Homepage</title>
+    <link
+      rel="shortcut icon"
+      href="https://kiit.ac.in/wp-content/uploads/2017/10/KIIT-Favicon-20x20.png"
+      type="image/x-icon"
+    />
+    <link href="./main.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="flex gap-5 justify-between mr-4 h-100 mr-4 mb--22 pb--26">
+        <button class="logo" onclick="gotohome('index.html')">
+          <img class="logoimg" src="./assets/fevicon.png" alt="kiit logo" />
+        </button>
+        <div class="flex gap-10 items-center">
+          <div class="lines">
+            <a href="https://kiit.ac.in/sap/">Sap Portal</a>
+          </div>
+          <div class="lines">
+            <a href="https://kiit.ac.in/training-placement/">Placements</a>
+          </div>
+          <div class="lines">
+            <a href="https://kiit.ac.in/career/">Careers</a>
+          </div>
+          <div class="lines">
+            <a
+              href="https://news.kiit.ac.in/?_gl=1%2A175ab7q%2A_ga%2ANDEwNDIxODQzLjE2OTQ4MTg1MzI.%2A_ga_34QZ5P9757%2AMTcwOTkzNDM1NS4zNC4xLjE3MDk5MzQ0NDQuMzIuMC4w"
+              >News & Events</a
+            >
+          </div>
+          <div class="lines">
+            <a
+              href="https://coe.kiit.ac.in/?_gl=1*1sl3eib*_ga*NDEwNDIxODQzLjE2OTQ4MTg1MzI.*_ga_34QZ5P9757*MTcwOTkzNDM1NS4zNC4xLjE3MDk5MzQ1NDcuNS4wLjA."
+              >Exams</a
+            >
+          </div>
+
+          <div class="lines">
+            <a href="https://kiit.ac.in/notices/">Notices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="block text-center py-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+    >
+      <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+        Welcome to Attendance Portal
+      </h1>
+    </div>
+    <div
+      class="overflow-hidden text-center bg-gradient-to-r from-rose-200 border-gray-500 to-amber-50"
+    >
+      <p id="notice" class="whitespace-nowrap loat-left clear-both">
+        Notice: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+        adipisci et qui eos praesentium est in numquam nihil distinctio
+        veritatis.
+      </p>
+    </div>
+    
+    <div class="captureImg">
+        
+    </div>
+    <script>
+      const notice = document.getElementById("notice");
+      animate(notice);
+      function animate(element) {
+        let elementWidth = element.offsetWidth;
+        let parentWidth = element.parentElement.offsetWidth;
+        let flag = 0;
+        setInterval(() => {
+          element.style.marginLeft = --flag + "px";
+          if (elementWidth == -flag) {
+            flag = parentWidth;
+          }
+        }, 10);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Portal</title>
+    <!-- fevicon -->
+    <link rel="shortcut icon" href="https://kiit.ac.in/wp-content/uploads/2017/10/KIIT-Favicon-20x20.png" type="image/x-icon">
+    <!-- custom css  -->
+    <link href="./main.css" rel="stylesheet">
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- link for webcamjs  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    
+    <!-- bootstrap link  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    
+</head>
+<body>
+    <!-- this is for the Ml part -->
+    <div class="flex items-center justify-center mt-14">
+        <div class="max-w-lg  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div id="capture">
+                <div id="my_camera" class="rounded-t-lg ml-0.5" alt="capture"></div>
+                <input type="hidden" name="captured_image_data" id="captured_image_data">
+            </div>
+            <div class="flex p-16 gap-16" id="results">
+                <img style="width: 350px;" class="after_capture_frame" src="image_placeholder.jpg" alt="captured Image"/>
+            </div>
+            <div class="flex p-16 gap-16">
+                <button onclick="capture_img()" class="inline-flex items-center  px-4 py-3 text-lg font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-black-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <!-- onclick to change the text  to save the thing or retry -->
+                    capture Image
+                </button>
+                <button onclick="saveSnap()" class="inline-flex items-center  px-4 py-3 text-lg font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-black-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Save Image
+                </button>
+                <button class="inline-flex items-center  px-10 py-3 text-lg font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                    close Tab
+                </button>
+            </div>
+        </div>
+    </div> 
+          
+
+</body>
+<script language="JavaScript">
+    // Configure a few settings and attach camera 250x187
+    Webcam.set({
+     width: 315,
+     height: 287,
+     image_format: 'jpeg',
+     jpeg_quality: 90
+    });	 
+    Webcam.attach( '#my_camera' );
+   
+   function capture_img() {
+    Webcam.snap( function(data_uri) {
+    // display results in page
+    document.getElementById('results').innerHTML = 
+     '<img id="after_capture_frame" src="'+data_uri+'"/>';
+    $("#captured_image_data").val(data_uri);
+    });	 
+   }
+
+   function saveSnap(){
+   var base64data = $("#captured_image_data").val();
+    $.ajax({
+           type: "POST",
+           dataType: "json",
+           url: "capture_image_upload.php",
+           data: {image: base64data},
+           success: function(data) { 
+               alert(data);
+           }
+       });
+   }
+</script> 
+</html>

@@ -1,0 +1,217 @@
+<!-- component -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link rel="shortcut icon" href="https://kiit.ac.in/wp-content/uploads/2017/10/KIIT-Favicon-20x20.png" type="image/x-icon">
+    <link href="./main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!--  Application Details Start -->
+    <div class="hero bgcolor-signup tint">
+        <div class="wrapper">
+            <div class="flex gap-5 justify-between mr-4 h-100 mr-4 mb--22 pb--26" >
+                <button class="logo" onclick="gotohome('index.html')">
+                    <img  class="logoimg mt-2 ml-6 w-28 h-24" src="./assets/fevicon.png" alt="kiit logo">
+                </button>
+                <div class="flex gap-10 items-center">
+                    <div class="lines text-white">
+                        <a href="https://kiit.ac.in/sap/">Sap Portal</a>
+                    </div>
+                    <div class="lines  text-white">
+                        <a href="https://kiit.ac.in/training-placement/">Placements</a>
+                    </div>
+                    <div class="lines text-white">
+                        <a href="https://kiit.ac.in/career/">Careers</a>
+                    </div>
+                    <div class="lines text-white">
+                        <a href="https://news.kiit.ac.in/?_gl=1%2A175ab7q%2A_ga%2ANDEwNDIxODQzLjE2OTQ4MTg1MzI.%2A_ga_34QZ5P9757%2AMTcwOTkzNDM1NS4zNC4xLjE3MDk5MzQ0NDQuMzIuMC4w">News & Events</a>
+                    </div>
+                    <div class="lines text-white">
+                        <a href="https://coe.kiit.ac.in/?_gl=1*1sl3eib*_ga*NDEwNDIxODQzLjE2OTQ4MTg1MzI.*_ga_34QZ5P9757*MTcwOTkzNDM1NS4zNC4xLjE3MDk5MzQ1NDcuNS4wLjA.">Exams</a>
+                    </div>
+    
+                    <div class="lines text-white">
+                        <a href="https://kiit.ac.in/notices/">Notices</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="w-full bg-grey-900">
+                <div class="container mx-auto py-8 ">
+                    <div class="w-96 mx-auto rounded shadow card_color">
+                        <div class="text-center mx-0 my--16 py-4 px-8 text-white text-xl font-bold border-b  border-grey-500">Student Sign Up
+                        </div>
+                        <form name="student_application" id="student_application" action="">
+                            <div class="py-4 px-8">
+                                <div class="mb-4">
+                                    <label class="block text-white text-sm font-bold mb-2">Email ID:</label>
+                                    <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                                        name="student_email" id="student_email" value="" placeholder="Enter KIIT email" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="block text-white text-sm font-bold mb-2">Password:</label>
+                                    <input type="password" name="pass1" id="pass1" placeholder="••••••••" class="border rounded w-full py-2 px-3 text-grey-darker" required="">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="block text-white text-sm font-bold mb-2">Confirm Password:</label>
+                                    <input type="password" name="pass2" id="pass2" placeholder="••••••••" class="border rounded w-full py-2 px-3 text-grey-darker" required="">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-white text-sm font-bold mb-2">Roll Number:</label>
+                                    <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                                        name="student_roll" id="student_roll" value="" placeholder="Enter Roll Number" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-white text-sm font-bold mb-2">Student Name:</label>
+                                    <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                                        name="student_name" id="student_name" value="" placeholder="Enter Your Name" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-white text-sm font-bold mb-2">Section:</label>
+                                    <input class="border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                                        name="section" id="section" value="" placeholder="Enter Your Section" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-white text-sm font-bold mb-2">Semester:</label>
+                                    <input class="border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                                        name="semester" id="semester" value="" placeholder="Enter Your Semester" required>
+                                </div>
+                                <div class="flex mb-4 gap-5 justify-between">
+                                    <div class="overflow-hidden relative mb-2 rounded-full py-1 px-4 bg-gradient-to-r from-green-400 to-blue-500  text-sm">
+                                        <button class="bg-blue hover:bg-blue-light font-bold py-2 px-2  w-full inline-flex items-center">
+                                             <svg fill="#FFF" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                                            </svg>
+                                            <span class="ml-2 font-normal">Upload Img</span>
+                                        </button>
+                                        <input
+                                            class="cursor-pointer absolute block py-2 px-4 w-full opacity-0 pin-r pin-t"
+                                            type="file"
+                                            name="documents[]"
+                                            accept="image/*"
+                                        >
+                                    </div>
+                                    <button
+                                        class="mb-2 rounded-full py-2 px-6 bg-gradient-to-r from-green-400 to-blue-500" onclick="studentlogin('student_login.html')" , id="submit">
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-grey-900">
+                <div class="container mx-auto py-8 ">
+                    <div class="w-96 mx-auto rounded shadow card_color">
+                        <div class="text-center my--16 py-4 px-8 text-white text-xl font-bold border-b  border-grey-500">Teacher Sign Up
+                        </div>
+                       
+                        <form name="teacher_application" id="teacher_application" action="">
+                            <div class="py-4 px-8">
+                                <div class="mb-4">
+                                    <label class="block text-white text-sm font-bold mb-2">Email ID:</label>
+                                    <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                                        name="teacher_email" id="teacher_email" value="" placeholder="Enter KIIT Email">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="block text-white text-sm font-bold mb-2">Password:</label>
+                                    <input type="password" name="pass3" id="pass3" placeholder="••••••••" class="border rounded w-full py-2 px-3 text-grey-darker" required="">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="block text-white text-sm font-bold mb-2">Confirm Password:</label>
+                                    <input type="password" name="pass4" id="pass4" placeholder="••••••••" class="border rounded w-full py-2 px-3 text-grey-darker" required="">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-white text-sm font-bold mb-2">Teacher's Name</label>
+                                    <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                                        name="teacher_name" id="teacher_name" value="" placeholder="Enter Your Name">
+                                </div>
+                                <div class="mb-4">
+                                    <button
+                                        class="mb-2 mx-16 rounded-full py-1 px-24 bg-gradient-to-r from-green-400 to-blue-500 " onclick="teacherlogin('teacher_login.html')">
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+        
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto text-center w-full max-w-screen-xl">
+          <div class="grid grid-cols-2 gap-12 px-4 py-2 lg:py-4 md:grid-cols-3">
+            <div>
+              <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Made By</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-1">
+                  <a href="https://www.linkedin.com/in/adyasha-rosalina-a5b815278/" class="hover:underline">Adyasha Rosalina</a>
+                </li>
+                <li class="mb-1">
+                  <a href="https://www.linkedin.com/in/adyasha-rosalina-a5b815278/" class="hover:underline">Anmol Kumar</a>
+                </li>
+                <li class="mb-1">
+                  <a href="https://www.linkedin.com/in/sushant-bhadra-0913aa233/" class="hover:underline">Sushant Bhadra</a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/soumyagayatri.das.3?mibextid=ZbWKwL" class="hover:underline">Soumya Gayatri Das</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-1">
+                  <a href="mailto:21051173@kiit.ac.in" class="hover:underline">21051173</a>
+                </li>
+                <li class="mb-1">
+                  <a href="mailto:21052308@kiit.ac.in" class="hover:underline">21052308</a>
+                </li>
+                <li class="mb-1">
+                  <a href="mailto:21052372@kiit.ac.in" class="hover:underline">21052372</a>
+                </li>
+                <li>
+                  <a href="mailto:22057064@kiit.ac.in" class="hover:underline">22057064</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-1">
+                      <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                  </li>
+                  <li class="mb-1">
+                      <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                  </li>
+                  <li>
+                      <a href="https://github.com/anmol-45/Attendance_Portal" class="hover:underline">Github</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script src="index.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js'
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js'
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js'
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js'
+      </script>
+
+</body>
+</html>

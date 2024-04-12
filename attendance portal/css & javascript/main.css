@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logoimg{
+    height: 100.68px;
+    
+}
+.prop {
+  border: none;
+  width: 100%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #1f120933;
+  box-shadow: 0 20px 20px -20px #333;
+  margin: -40px auto 10px;
+}
+
+.lines a {
+  border-bottom: 3px solid transparent; /* Initially transparent */
+  transition: border-bottom 0.3s; /* Smooth transition */
+}
+
+.lines a:hover {
+  color: #15a499;
+  border-bottom: 3px solid #15a499; /* Border color on hover */
+  transform-origin: center;
+  transition: all 0.3s;
+}
+
+/* Optional: To remove underline from non-hovered links */
+.lines a:not(:hover) {
+  text-decoration: none;
+}
+  
+  .tint{
+    position: relative;
+    z-index: 2;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+  }
+.bgcolor-signup{
+  background-image: url(./assets/signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card_color{
+  background-color: rgba(32,60,59,1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+.popupbox{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.popup{
+  padding-bottom: 4px;
+}
+.popup:hover{
+  transform: scale(1.2);
+  transition: all 0.3s;
+  color: rgb(0, 0, 0);
+}
+
+
+.popup:not(:hover) {
+  transition: all 0.3s;
+}
+.underline{
+  text-decoration: underline;
+}

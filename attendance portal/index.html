@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Poral</title>
+    <link rel="shortcut icon" href="https://kiit.ac.in/wp-content/uploads/2017/10/KIIT-Favicon-20x20.png" type="image/x-icon">
+    <link href="./main.css" rel="stylesheet">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flex gap-5 justify-between mr-4 h-100 mr-4 mb--22 pb--26" >
+            <div class="logo">
+                <img  class="logoimg mt-2 ml-6 w-28 h-24" src="./assets/fevicon.png" alt="kiit logo">
+            </div>
+            <div class="flex gap-10 items-center">
+                <div class="lines">
+                    <a href="https://kiit.ac.in/sap/">Sap Portal</a>
+                </div>
+                <div class="lines">
+                    <a href="https://kiit.ac.in/training-placement/">Placements</a>
+                </div>
+                <div class="lines">
+                    <a href="https://kiit.ac.in/career/">Careers</a>
+                </div>
+                <div class="lines">
+                    <a href="https://news.kiit.ac.in/?_gl=1%2A175ab7q%2A_ga%2ANDEwNDIxODQzLjE2OTQ4MTg1MzI.%2A_ga_34QZ5P9757%2AMTcwOTkzNDM1NS4zNC4xLjE3MDk5MzQ0NDQuMzIuMC4w">News & Events</a>
+                </div>
+                <div class="lines">
+                    <a href="https://coe.kiit.ac.in/?_gl=1*1sl3eib*_ga*NDEwNDIxODQzLjE2OTQ4MTg1MzI.*_ga_34QZ5P9757*MTcwOTkzNDM1NS4zNC4xLjE3MDk5MzQ1NDcuNS4wLjA.">Exams</a>
+                </div>
+
+                <div class="lines">
+                    <a href="https://kiit.ac.in/notices/">Notices</a>
+                </div>
+                <button class="rounded-full px-4 bg-[#15a499] popupbox" onclick="gotosignup('teacher_signup.html')">
+                    <div class="popup text-white">
+                        Sign Up
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-gray-300">
+        <div class="block text-center py-10 bg-white border-gray-200 shadow dark:bg-[#203C3B] shadow-md dark:border-gray-700 bgcolor">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-gray-500 dark:text-white">KIIT Attendance Portal</h5>
+            <p class="font-normal text-gray-700 dark:text-gray-200">Zero Proxy, Setting the Standard for Accuracy.</p>
+        </div>
+        <div class="p-1 flex flex-wrap items-center justify-center">
+            <div class="flex-shrink-0 m-6 relative overflow-hidden bg-blue-500 rounded-lg max-w-xs shadow-lg group">
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                        style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
+                    </div>
+                    <img class="relative w-40" src="./assets/student.png" alt="">
+                </div>
+                <div class="relative text-white px-6 pb-6 mt-6">
+                    <div class="flex justify-between">
+                        <span class="block font-semibold text-xl">Student Login</span>
+                        <button class="block bg-white rounded-full text-blue-500 text-xs font-bold px-3 py-2 leading-none flex items-center" onclick="studentlogin('Student_Login.html')">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-shrink-0 m-6 relative overflow-hidden bg-teal-500 rounded-lg max-w-xs shadow-lg group">
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform" viewBox="0 0 375 283" fill="none"
+                    style="opacity: 0.1;">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                        style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
+                    </div>
+                    <img class="relative w-40" src="./assets/teacher.png" alt="">
+                </div>
+                <div class="relative text-white px-6 pb-6 mt-6">
+                    <div class="flex justify-between">
+                        <span class="block font-semibold text-xl">Teacher Login</span>
+                        <button class="block bg-white rounded-full text-teal-500 text-xs font-bold px-3 py-2 leading-none flex items-center" onclick="teacherlogin('teacher_login.html')">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto text-center w-full max-w-screen-xl">
+          <div class="grid grid-cols-2 gap-12 px-4 py-2 lg:py-4 md:grid-cols-3">
+            <div>
+              <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Made By</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-1">
+                  <a href="https://www.linkedin.com/in/adyasha-rosalina-a5b815278/" class="hover:underline">Adyasha Rosalina</a>
+                </li>
+                <li class="mb-1">
+                  <a href="https://www.linkedin.com/in/adyasha-rosalina-a5b815278/" class="hover:underline">Anmol Kumar</a>
+                </li>
+                <li class="mb-1">
+                  <a href="https://www.linkedin.com/in/sushant-bhadra-0913aa233/" class="hover:underline">Sushant Bhadra</a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/soumyagayatri.das.3?mibextid=ZbWKwL" class="hover:underline">Soumya Gayatri Das</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-1">
+                  <a href="mailto:21051173@kiit.ac.in" class="hover:underline">21051173</a>
+                </li>
+                <li class="mb-1">
+                  <a href="mailto:21052308@kiit.ac.in" class="hover:underline">21052308</a>
+                </li>
+                <li class="mb-1">
+                  <a href="mailto:21052372@kiit.ac.in" class="hover:underline">21052372</a>
+                </li>
+                <li>
+                  <a href="mailto:22057064@kiit.ac.in" class="hover:underline">22057064</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-1">
+                      <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                  </li>
+                  <li class="mb-1">
+                      <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                  </li>
+                  <li>
+                      <a href="https://github.com/anmol-45/Attendance_Portal" class="hover:underline">Github</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
